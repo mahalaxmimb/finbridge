@@ -1,3 +1,26 @@
 import { Routes } from '@angular/router';
+import { NotFoundComponent } from './features/not-found/not-found.component';
 
-export const routes: Routes = [];
+export const routes: Routes = [
+  {
+    path: '',
+    redirectTo: 'login',
+    pathMatch: 'full'
+  },
+  {
+    path: 'login',
+    loadChildren: () =>
+      import('./features/auth/auth.routes').then(m => m.AUTH_ROUTES)
+  },
+  {
+    path: 'dashboard',
+    loadChildren: () =>
+      import('./features/dashboard/dashboard.routes').then(
+        m => m.DASHBOARD_ROUTES
+      )
+  },
+  {
+    path: '**',
+    component: NotFoundComponent
+  }
+];
