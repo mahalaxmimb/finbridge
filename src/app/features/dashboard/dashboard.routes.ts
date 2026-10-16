@@ -4,16 +4,18 @@ export const DASHBOARD_ROUTES: Routes = [
   {
     path: '',
     loadComponent: () =>
-      import('../../core/layout/layout/layout.component')
-        .then(m => m.LayoutComponent),
+      import('../../core/layout/layout/layout.component').then(
+        (m) => m.LayoutComponent,
+      ),
 
     children: [
       {
         path: '',
         loadComponent: () =>
-          import('./pages/dashboard/dashboard.component')
-            .then(m => m.DashboardComponent)
-      }
-    ]
-  }
+          import('./pages/dashboard/dashboard.component').then(
+            (m) => m.DashboardComponent,
+          ),
+      },
+    ],
+  },
 ];

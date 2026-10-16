@@ -4,7 +4,8 @@ export const AUTH_ROUTES: Routes = [
   {
     path: '',
     loadComponent: () =>
-      import('./pages/login-page/loginpage.component')
-        .then(m => m.LoginPageComponent),
+      import('./pages/login-page/loginpage.component').then(
+        (m) => m.LoginPageComponent,
+      ),
   },
 ];

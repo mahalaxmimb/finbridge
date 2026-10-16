@@ -9,13 +9,16 @@ import { MatListModule } from '@angular/material/list';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 @Component({
-    selector: 'app-layout',
-    templateUrl: './layout.component.html',
-    styleUrl: './layout.component.scss',
-    imports: [HeaderComponent, SidebarComponent, FooterComponent, RouterOutlet, MatSidenavModule],
-    standalone: true
+  selector: 'app-layout',
+  templateUrl: './layout.component.html',
+  styleUrl: './layout.component.scss',
+  imports: [
+    HeaderComponent,
+    SidebarComponent,
+    FooterComponent,
+    RouterOutlet,
+    MatSidenavModule,
+  ],
+  standalone: true,
 })
-
-export class LayoutComponent {
-
-}
+export class LayoutComponent {}
