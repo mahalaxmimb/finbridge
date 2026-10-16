@@ -1,3 +1,19 @@
-<header>
-    Header Works
-</header>
+<mat-toolbar color="primary">
+  <span>FinBridge</span>
+
+  <span class="spacer"></span>
+
+  <button mat-icon-button (click)="themeService.toggleTheme()">
+    <mat-icon>
+      {{ themeService.currentTheme() === "light" ? "dark_mode" : "light_mode" }}
+    </mat-icon>
+  </button>
+
+  <button mat-icon-button>
+    <mat-icon>notifications</mat-icon>
+  </button>
+
+  <button mat-icon-button>
+    <mat-icon>account_circle</mat-icon>
+  </button>
+</mat-toolbar>

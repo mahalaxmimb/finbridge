@@ -1,4 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
+@use "./styles/material-theme";
+@use "./styles/dark-theme";
+@use "./styles/light-theme";
+@use "./styles/colours";
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}

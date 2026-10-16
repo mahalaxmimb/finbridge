@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
+import { MatNavList } from "@angular/material/list";
 
 @Component({
     selector: 'app-sidebar',
     templateUrl: './sidebar.component.html',
     styleUrl: './sidebar.component.scss',
-    imports: [],
+    imports: [MatNavList],
     standalone: true
 })
 
